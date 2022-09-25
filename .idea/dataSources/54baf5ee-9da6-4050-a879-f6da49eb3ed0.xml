@@ -3,9 +3,9 @@
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.43">
     <root id="1">
       <DateStyle>dmy</DateStyle>
-      <IntrospectionStateNumber>2072</IntrospectionStateNumber>
+      <IntrospectionStateNumber>2092</IntrospectionStateNumber>
       <ServerVersion>14.4</ServerVersion>
-      <StartupTime>1663790168</StartupTime>
+      <StartupTime>1663790789</StartupTime>
       <TimeZones>true ACDT
 true ACSST
 false ACST
@@ -800,26 +800,29 @@ false Zulu
 13388||10|C|G
 13388||-9223372036854775808|U|G
 13388||10|U|G</Grants>
-      <IntrospectionStateNumber>2072</IntrospectionStateNumber>
+      <IntrospectionStateNumber>2092</IntrospectionStateNumber>
       <ObjectId>16402</ObjectId>
-      <Relations>sequence|table|16422|16423|1
+      <Relations>sequence|table|16675|16676|1
+sequence|table|16683|16684|1
+sequence|table|16689|16690|1
+sequence|table|16422|16423|1
 sequence|table|16433|16434|1
 sequence|table|16440|16441|1
 sequence|table|16452|16453|1
 </Relations>
       <OwnerName>postgres</OwnerName>
     </database>
-    <database id="3" parent="1" name="homework_sulman">
-      <ObjectId>16474</ObjectId>
+    <database id="3" parent="1" name="postgres">
+      <Comment>default administrative connection database</Comment>
+      <ObjectId>13754</ObjectId>
       <OwnerName>postgres</OwnerName>
     </database>
     <database id="4" parent="1" name="java_ee_db">
       <ObjectId>16394</ObjectId>
       <OwnerName>postgres</OwnerName>
     </database>
-    <database id="5" parent="1" name="postgres">
-      <Comment>default administrative connection database</Comment>
-      <ObjectId>13754</ObjectId>
+    <database id="5" parent="1" name="homework_sulman">
+      <ObjectId>16474</ObjectId>
       <OwnerName>postgres</OwnerName>
     </database>
     <database id="6" parent="1" name="project1">
@@ -829,17 +832,17 @@ sequence|table|16452|16453|1
     <role id="7" parent="1" name="pg_database_owner">
       <ObjectId>6171</ObjectId>
     </role>
-    <role id="8" parent="1" name="pg_execute_server_program">
-      <ObjectId>4571</ObjectId>
+    <role id="8" parent="1" name="pg_read_all_data">
+      <ObjectId>6181</ObjectId>
     </role>
-    <role id="9" parent="1" name="pg_monitor">
+    <role id="9" parent="1" name="pg_write_all_data">
+      <ObjectId>6182</ObjectId>
+    </role>
+    <role id="10" parent="1" name="pg_monitor">
       <ObjectId>3373</ObjectId>
       <RoleGrants>3374
 3375
 3377</RoleGrants>
-    </role>
-    <role id="10" parent="1" name="pg_read_all_data">
-      <ObjectId>6181</ObjectId>
     </role>
     <role id="11" parent="1" name="pg_read_all_settings">
       <ObjectId>3374</ObjectId>
@@ -847,20 +850,20 @@ sequence|table|16452|16453|1
     <role id="12" parent="1" name="pg_read_all_stats">
       <ObjectId>3375</ObjectId>
     </role>
-    <role id="13" parent="1" name="pg_read_server_files">
-      <ObjectId>4569</ObjectId>
-    </role>
-    <role id="14" parent="1" name="pg_signal_backend">
-      <ObjectId>4200</ObjectId>
-    </role>
-    <role id="15" parent="1" name="pg_stat_scan_tables">
+    <role id="13" parent="1" name="pg_stat_scan_tables">
       <ObjectId>3377</ObjectId>
     </role>
-    <role id="16" parent="1" name="pg_write_all_data">
-      <ObjectId>6182</ObjectId>
+    <role id="14" parent="1" name="pg_read_server_files">
+      <ObjectId>4569</ObjectId>
     </role>
-    <role id="17" parent="1" name="pg_write_server_files">
+    <role id="15" parent="1" name="pg_write_server_files">
       <ObjectId>4570</ObjectId>
+    </role>
+    <role id="16" parent="1" name="pg_execute_server_program">
+      <ObjectId>4571</ObjectId>
+    </role>
+    <role id="17" parent="1" name="pg_signal_backend">
+      <ObjectId>4200</ObjectId>
     </role>
     <role id="18" parent="1" name="postgres">
       <BypassRls>1</BypassRls>
@@ -4243,7 +4246,7 @@ sequence|table|16452|16453|1
     <schema id="265" parent="2" name="public">
       <Comment>standard public schema</Comment>
       <Current>1</Current>
-      <IntrospectionStateNumber>2072</IntrospectionStateNumber>
+      <IntrospectionStateNumber>2092</IntrospectionStateNumber>
       <ObjectId>2200</ObjectId>
       <StateNumber>527</StateNumber>
       <OwnerName>postgres</OwnerName>
@@ -4254,61 +4257,97 @@ sequence|table|16452|16453|1
       <StateNumber>1809</StateNumber>
       <OwnerName>postgres</OwnerName>
     </sequence>
-    <sequence id="267" parent="265" name="director_director_id_seq">
+    <sequence id="267" parent="265" name="customers_id_seq">
+      <DataType>integer|0s</DataType>
+      <ObjectId>16683</ObjectId>
+      <StateNumber>2075</StateNumber>
+      <OwnerName>postgres</OwnerName>
+    </sequence>
+    <sequence id="268" parent="265" name="director_director_id_seq">
       <DataType>integer|0s</DataType>
       <ObjectId>16433</ObjectId>
       <StateNumber>1787</StateNumber>
       <OwnerName>postgres</OwnerName>
     </sequence>
-    <sequence id="268" parent="265" name="movie_movie_id_seq">
+    <sequence id="269" parent="265" name="movie_movie_id_seq">
       <DataType>integer|0s</DataType>
       <ObjectId>16440</ObjectId>
       <StateNumber>1789</StateNumber>
       <OwnerName>postgres</OwnerName>
     </sequence>
-    <sequence id="269" parent="265" name="person_id_seq">
+    <sequence id="270" parent="265" name="orders_id_seq">
+      <DataType>integer|0s</DataType>
+      <ObjectId>16689</ObjectId>
+      <StateNumber>2076</StateNumber>
+      <OwnerName>postgres</OwnerName>
+    </sequence>
+    <sequence id="271" parent="265" name="person_id_seq">
       <DataType>integer|0s</DataType>
       <ObjectId>16422</ObjectId>
       <StateNumber>1783</StateNumber>
       <OwnerName>postgres</OwnerName>
     </sequence>
-    <table id="270" parent="265" name="citizen">
+    <sequence id="272" parent="265" name="products_id_seq">
+      <DataType>integer|0s</DataType>
+      <ObjectId>16675</ObjectId>
+      <StateNumber>2074</StateNumber>
+      <OwnerName>postgres</OwnerName>
+    </sequence>
+    <table id="273" parent="265" name="citizen">
       <ObjectId>16453</ObjectId>
       <StateNumber>1810</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="271" parent="265" name="director">
+    <table id="274" parent="265" name="customers">
+      <ObjectId>16684</ObjectId>
+      <StateNumber>2076</StateNumber>
+      <AccessMethodId>2</AccessMethodId>
+      <OwnerName>postgres</OwnerName>
+    </table>
+    <table id="275" parent="265" name="director">
       <ObjectId>16434</ObjectId>
       <StateNumber>1789</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="272" parent="265" name="movie">
+    <table id="276" parent="265" name="movie">
       <ObjectId>16441</ObjectId>
       <StateNumber>1789</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="273" parent="265" name="passport">
+    <table id="277" parent="265" name="orders">
+      <ObjectId>16690</ObjectId>
+      <StateNumber>2076</StateNumber>
+      <AccessMethodId>2</AccessMethodId>
+      <OwnerName>postgres</OwnerName>
+    </table>
+    <table id="278" parent="265" name="passport">
       <ObjectId>16459</ObjectId>
       <StateNumber>1810</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="274" parent="265" name="person">
+    <table id="279" parent="265" name="person">
       <ObjectId>16423</ObjectId>
       <StateNumber>1827</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <check id="275" parent="270" name="citizen_age_check">
+    <table id="280" parent="265" name="products">
+      <ObjectId>16676</ObjectId>
+      <StateNumber>2076</StateNumber>
+      <AccessMethodId>2</AccessMethodId>
+      <OwnerName>postgres</OwnerName>
+    </table>
+    <check id="281" parent="273" name="citizen_age_check">
       <ColNames>age</ColNames>
       <ObjectId>16456</ObjectId>
       <Predicate>age &gt; 0</Predicate>
       <StateNumber>1809</StateNumber>
     </check>
-    <column id="276" parent="270" name="citizen_id">
+    <column id="282" parent="273" name="citizen_id">
       <DataType>integer|0s</DataType>
       <IdentityKind>by-default</IdentityKind>
       <NotNull>1</NotNull>
@@ -4316,20 +4355,20 @@ sequence|table|16452|16453|1
       <StateNumber>1809</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="277" parent="270" name="name">
+    <column id="283" parent="273" name="name">
       <DataType>varchar(100)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>1809</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="278" parent="270" name="age">
+    <column id="284" parent="273" name="age">
       <DataType>integer|0s</DataType>
       <Position>3</Position>
       <StateNumber>1809</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <index id="279" parent="270" name="citizen_pkey">
+    <index id="285" parent="273" name="citizen_pkey">
       <ColNames>citizen_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16457</ObjectId>
@@ -4338,20 +4377,50 @@ sequence|table|16452|16453|1
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="280" parent="270" name="citizen_pkey">
+    <key id="286" parent="273" name="citizen_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16458</ObjectId>
       <Primary>1</Primary>
       <StateNumber>1809</StateNumber>
       <UnderlyingIndexId>16457</UnderlyingIndexId>
     </key>
-    <check id="281" parent="271" name="director_age_check">
+    <column id="287" parent="274" name="id">
+      <DataType>integer|0s</DataType>
+      <IdentityKind>by-default</IdentityKind>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StateNumber>2075</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="288" parent="274" name="name">
+      <DataType>varchar(255)|0s</DataType>
+      <Position>2</Position>
+      <StateNumber>2075</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="289" parent="274" name="customers_pkey">
+      <ColNames>id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16687</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>2075</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+    </index>
+    <key id="290" parent="274" name="customers_pkey">
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16688</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>2075</StateNumber>
+      <UnderlyingIndexId>16687</UnderlyingIndexId>
+    </key>
+    <check id="291" parent="275" name="director_age_check">
       <ColNames>age</ColNames>
       <ObjectId>16437</ObjectId>
       <Predicate>age &gt; 10</Predicate>
       <StateNumber>1787</StateNumber>
     </check>
-    <column id="282" parent="271" name="director_id">
+    <column id="292" parent="275" name="director_id">
       <DataType>integer|0s</DataType>
       <IdentityKind>by-default</IdentityKind>
       <NotNull>1</NotNull>
@@ -4359,20 +4428,20 @@ sequence|table|16452|16453|1
       <StateNumber>1787</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="283" parent="271" name="name">
+    <column id="293" parent="275" name="name">
       <DataType>varchar(100)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>1787</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="284" parent="271" name="age">
+    <column id="294" parent="275" name="age">
       <DataType>integer|0s</DataType>
       <Position>3</Position>
       <StateNumber>1787</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <index id="285" parent="271" name="director_pkey">
+    <index id="295" parent="275" name="director_pkey">
       <ColNames>director_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16438</ObjectId>
@@ -4381,20 +4450,20 @@ sequence|table|16452|16453|1
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="286" parent="271" name="director_pkey">
+    <key id="296" parent="275" name="director_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16439</ObjectId>
       <Primary>1</Primary>
       <StateNumber>1787</StateNumber>
       <UnderlyingIndexId>16438</UnderlyingIndexId>
     </key>
-    <check id="287" parent="272" name="movie_year_of_production_check">
+    <check id="297" parent="276" name="movie_year_of_production_check">
       <ColNames>year_of_production</ColNames>
       <ObjectId>16444</ObjectId>
       <Predicate>year_of_production &gt; 1900</Predicate>
       <StateNumber>1789</StateNumber>
     </check>
-    <column id="288" parent="272" name="movie_id">
+    <column id="298" parent="276" name="movie_id">
       <DataType>integer|0s</DataType>
       <IdentityKind>by-default</IdentityKind>
       <NotNull>1</NotNull>
@@ -4402,27 +4471,27 @@ sequence|table|16452|16453|1
       <StateNumber>1789</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="289" parent="272" name="director_id">
+    <column id="299" parent="276" name="director_id">
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>1789</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="290" parent="272" name="name">
+    <column id="300" parent="276" name="name">
       <DataType>varchar(200)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StateNumber>1789</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="291" parent="272" name="year_of_production">
+    <column id="301" parent="276" name="year_of_production">
       <DataType>integer|0s</DataType>
       <Position>4</Position>
       <StateNumber>1789</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <foreign-key id="292" parent="272" name="movie_director_id_fkey">
+    <foreign-key id="302" parent="276" name="movie_director_id_fkey">
       <ColNames>director_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16447</ObjectId>
@@ -4433,7 +4502,7 @@ sequence|table|16452|16453|1
       <RefTableName>director</RefTableName>
       <RefTableKind>table</RefTableKind>
     </foreign-key>
-    <index id="293" parent="272" name="movie_pkey">
+    <index id="303" parent="276" name="movie_pkey">
       <ColNames>movie_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16445</ObjectId>
@@ -4442,27 +4511,103 @@ sequence|table|16452|16453|1
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="294" parent="272" name="movie_pkey">
+    <key id="304" parent="276" name="movie_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16446</ObjectId>
       <Primary>1</Primary>
       <StateNumber>1789</StateNumber>
       <UnderlyingIndexId>16445</UnderlyingIndexId>
     </key>
-    <column id="295" parent="273" name="citizen_id">
+    <check id="305" parent="277" name="orders_products_amount_check">
+      <ColNames>products_amount</ColNames>
+      <ObjectId>16693</ObjectId>
+      <Predicate>products_amount &gt; 0</Predicate>
+      <StateNumber>2076</StateNumber>
+    </check>
+    <column id="306" parent="277" name="id">
+      <DataType>integer|0s</DataType>
+      <IdentityKind>by-default</IdentityKind>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StateNumber>2076</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="307" parent="277" name="product_id">
+      <DataType>integer|0s</DataType>
+      <Position>2</Position>
+      <StateNumber>2076</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="308" parent="277" name="customer_id">
+      <DataType>integer|0s</DataType>
+      <Position>3</Position>
+      <StateNumber>2076</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="309" parent="277" name="order_date">
+      <DataType>date|0s</DataType>
+      <Position>4</Position>
+      <StateNumber>2076</StateNumber>
+      <TypeId>1082</TypeId>
+    </column>
+    <column id="310" parent="277" name="products_amount">
+      <DataType>integer|0s</DataType>
+      <Position>5</Position>
+      <StateNumber>2076</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <foreign-key id="311" parent="277" name="orders_product_id_fkey">
+      <ColNames>product_id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16696</ObjectId>
+      <RefColNames>id</RefColNames>
+      <RefColPositions>1</RefColPositions>
+      <StateNumber>2076</StateNumber>
+      <RefTableId>16676</RefTableId>
+      <RefTableName>products</RefTableName>
+      <RefTableKind>table</RefTableKind>
+    </foreign-key>
+    <foreign-key id="312" parent="277" name="orders_customer_id_fkey">
+      <ColNames>customer_id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16701</ObjectId>
+      <RefColNames>id</RefColNames>
+      <RefColPositions>1</RefColPositions>
+      <StateNumber>2076</StateNumber>
+      <RefTableId>16684</RefTableId>
+      <RefTableName>customers</RefTableName>
+      <RefTableKind>table</RefTableKind>
+    </foreign-key>
+    <index id="313" parent="277" name="orders_pkey">
+      <ColNames>id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16694</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>2076</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+    </index>
+    <key id="314" parent="277" name="orders_pkey">
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16695</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>2076</StateNumber>
+      <UnderlyingIndexId>16694</UnderlyingIndexId>
+    </key>
+    <column id="315" parent="278" name="citizen_id">
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StateNumber>1810</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="296" parent="273" name="passport_number">
+    <column id="316" parent="278" name="passport_number">
       <DataType>integer|0s</DataType>
       <Position>2</Position>
       <StateNumber>1810</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <foreign-key id="297" parent="273" name="passport_citizen_id_fkey">
+    <foreign-key id="317" parent="278" name="passport_citizen_id_fkey">
       <ColNames>citizen_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16464</ObjectId>
@@ -4473,7 +4618,7 @@ sequence|table|16452|16453|1
       <RefTableName>citizen</RefTableName>
       <RefTableKind>table</RefTableKind>
     </foreign-key>
-    <index id="298" parent="273" name="passport_pkey">
+    <index id="318" parent="278" name="passport_pkey">
       <ColNames>citizen_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16462</ObjectId>
@@ -4482,20 +4627,20 @@ sequence|table|16452|16453|1
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="299" parent="273" name="passport_pkey">
+    <key id="319" parent="278" name="passport_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16463</ObjectId>
       <Primary>1</Primary>
       <StateNumber>1810</StateNumber>
       <UnderlyingIndexId>16462</UnderlyingIndexId>
     </key>
-    <check id="300" parent="274" name="person_age_check">
+    <check id="320" parent="279" name="person_age_check">
       <ColNames>age</ColNames>
       <ObjectId>16426</ObjectId>
       <Predicate>age &gt; 0</Predicate>
       <StateNumber>1783</StateNumber>
     </check>
-    <column id="301" parent="274" name="id">
+    <column id="321" parent="279" name="id">
       <DataType>integer|0s</DataType>
       <IdentityKind>by-default</IdentityKind>
       <NotNull>1</NotNull>
@@ -4503,33 +4648,33 @@ sequence|table|16452|16453|1
       <StateNumber>1783</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="302" parent="274" name="name">
+    <column id="322" parent="279" name="name">
       <DataType>varchar|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>1783</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="303" parent="274" name="age">
+    <column id="323" parent="279" name="age">
       <DataType>integer|0s</DataType>
       <Position>3</Position>
       <StateNumber>1783</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="304" parent="274" name="email">
+    <column id="324" parent="279" name="email">
       <DataType>varchar|0s</DataType>
       <Position>4</Position>
       <StateNumber>1783</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="305" parent="274" name="address">
+    <column id="325" parent="279" name="address">
       <DataType>varchar|0s</DataType>
       <NotNull>1</NotNull>
       <Position>5</Position>
       <StateNumber>1827</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="306" parent="274" name="person_pkey">
+    <index id="326" parent="279" name="person_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16429</ObjectId>
@@ -4538,7 +4683,7 @@ sequence|table|16452|16453|1
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <index id="307" parent="274" name="person_email_key">
+    <index id="327" parent="279" name="person_email_key">
       <ColNames>email</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16431</ObjectId>
@@ -4549,18 +4694,72 @@ sequence|table|16452|16453|1
       <CollationIds>100</CollationIds>
       <CollationParentNames>pg_catalog</CollationParentNames>
     </index>
-    <key id="308" parent="274" name="person_pkey">
+    <key id="328" parent="279" name="person_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16430</ObjectId>
       <Primary>1</Primary>
       <StateNumber>1783</StateNumber>
       <UnderlyingIndexId>16429</UnderlyingIndexId>
     </key>
-    <key id="309" parent="274" name="person_email_key">
+    <key id="329" parent="279" name="person_email_key">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16432</ObjectId>
       <StateNumber>1783</StateNumber>
       <UnderlyingIndexId>16431</UnderlyingIndexId>
+    </key>
+    <check id="330" parent="280" name="products_amount_check">
+      <ColNames>amount</ColNames>
+      <ObjectId>16680</ObjectId>
+      <Predicate>amount &gt; 0</Predicate>
+      <StateNumber>2074</StateNumber>
+    </check>
+    <check id="331" parent="280" name="products_price_check">
+      <ColNames>price</ColNames>
+      <ObjectId>16679</ObjectId>
+      <Predicate>price &gt; 0</Predicate>
+      <StateNumber>2074</StateNumber>
+    </check>
+    <column id="332" parent="280" name="id">
+      <DataType>integer|0s</DataType>
+      <IdentityKind>by-default</IdentityKind>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StateNumber>2074</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="333" parent="280" name="title">
+      <DataType>varchar(255)|0s</DataType>
+      <Position>2</Position>
+      <StateNumber>2074</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="334" parent="280" name="price">
+      <DataType>integer|0s</DataType>
+      <Position>3</Position>
+      <StateNumber>2074</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="335" parent="280" name="amount">
+      <DataType>integer|0s</DataType>
+      <Position>4</Position>
+      <StateNumber>2074</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <index id="336" parent="280" name="products_pkey">
+      <ColNames>id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16681</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>2074</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+    </index>
+    <key id="337" parent="280" name="products_pkey">
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16682</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>2074</StateNumber>
+      <UnderlyingIndexId>16681</UnderlyingIndexId>
     </key>
   </database-model>
 </dataSource>
